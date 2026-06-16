@@ -1,89 +1,169 @@
-[Erome Downloader](https://apify.com/vnx0/erome-downloader?fpr=data)
+[Erome Downloader](https://apify.com/serpxxx/erome-downloader?fpr=data)
 
-# Erome Downloader & Scraper
+> Save supported EroMe album videos and images into organized local folders from the browser.
 
-A fast, highly efficient **Erome downloader and scraper** designed to extract and bulk-download videos, images, and albums from erome.com. Perfect for media archivers, data extraction, and automation workflows. This powerful software simplifies the entire process of downloading content from Erome, whether it's a single album, a batch of albums, a specific user profile, or search results.
+## Get it Here
 
-Features include raw media extraction, bulk gallery downloading, bypasses for HTTP 403 blocks (using built-in residential proxies and authentic headers), and fully structured metadata exports.
+Get it here: [https://serp.ly/erome-downloader](https://serp.ly/erome-downloader)
+
+![Erome Downloader](https://images.apifyusercontent.com/4mSTQ3cVDuyqyyn5t8z4QQOol6ybA6Q2JgvAEyqtMDw/w:1800/cb:1/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NlcnB4eHgvZXJvbWUtZG93bmxvYWRlci9tYWluL2Fzc2V0cy93b3JrZmxvdy1wcmV2aWV3LndlYnA.webp)
+
+EroMe Downloader is a browser extension for users who want a cleaner way to save supported EroMe albums without picking through each file manually. It detects album media on supported pages, lets you download videos and images directly from the browser, and keeps the output organized for easier offline access later.
+
+- Save supported EroMe videos and images from album pages
+- Download individual media items or work through albums faster
+- Export videos as MP4 and keep images in their original format
+- Use in-page controls, popup controls, or right-click actions
+- Keep files organized in a dedicated local folder structure
+
+## Table of Contents
+
+- Why EroMe Downloader
+- Features
+- How It Works
+- Step-by-Step Tutorial: How to Download Albums from EroMe
+- Supported Formats
+- Who It's For
+- Common Use Cases
+- Troubleshooting
+- Trial & Access
+- Installation Instructions
+- FAQ
+- Notes
+- License
+- About EroMe
+
+## Why EroMe Downloader
+
+EroMe albums can mix video and image content on the same page, which makes manual saving slow and messy. Generic downloaders often miss album structure, force one-file-at-a-time workflows, or ignore some media types entirely.
+
+EroMe Downloader is designed around that album workflow. It detects supported media on the page, gives you direct download controls for each item, and makes it easier to save videos and images into an organized local archive without leaving the browser.
 
 ## Features
 
-- **⚡️ Bulk Album Downloader:** Download images and high-quality videos directly from Erome albums.
-- **👤 Profile Scraper:** Extract and download all albums and posts natively found on any creator's profile page.
-- **🔍 Search Automation:** Scrape Erome search results and seamlessly extract their subsequent albums automatically.
-- **🚀 Fast & Reliable:** Built with advanced networking to prevent 403 Forbidden blockers, timeouts, and IP blocks seamlessly.
-- **🛡️ Proxy Support:** Fully integrates with high-quality proxies to maintain high scraping success rates securely.
-- **📊 Structured Data Extraction:** Retrieves album tags, titles, dates, uploaders, and individual media URLs in a structured format for easy database storage or further API usage.
+- Album-aware detection for supported EroMe videos and images
+- In-page controls on supported album and media pages
+- Video export to MP4 for easier playback later
+- Original-format image saving where supported
+- Quality selection for available video stream variants
+- Popup workflow for reviewing detected media
+- Right-click access for faster video downloads
+- Automatic saving into a dedicated EROME folder
+- Cross-browser support for Chrome, Edge, Brave, Opera, Firefox, Whale, and Yandex
 
-## Why use this Erome Downloader?
+## How It Works
 
-This tool acts as a premier **gallery-downloader and data-extraction tool**. Standard Python scrapers or standalone scripts can drop connections, get banned by 410 headers, or struggle with concurrency. Our software utilizes a robust infrastructure for flawless, concurrent data extraction, automatically dealing with headers, retries, and proxies.
+1. Install the extension from the latest release.
+2. Open EroMe and go to a supported album or media page.
+3. Let the page load so the extension can detect the available media.
+4. Use the in-page controls, popup, or right-click actions.
+5. Choose the video quality you want if multiple options are available.
+6. Download the selected videos or images.
+7. Open the saved files from your Downloads folder.
 
-You can dynamically toggle the media download capability if you only want the metadata, or you can seamlessly archive the raw `.mp4` and `.jpg` files directly to your storage seamlessly.
+## Step-by-Step Tutorial: How to Download Albums from EroMe
 
-## Input Configuration
+1. Install EroMe Downloader from the latest GitHub release.
+2. Open a supported EroMe album or media page.
+3. Wait for the album contents to load fully.
+4. Click the extension button or use the download controls shown on the page.
+5. For videos, review the quality options shown by the extension.
+6. Download the items you want from the album.
+7. Wait for the export to finish.
+8. Open the organized files from your Downloads folder.
 
-The scraper accepts input via a sleek interface or a generic data payload.
+## Supported Formats
 
-| Field | Type | Description |
-| --- | --- | --- |
-| `url` | String | A single Erome album URL to scrape and download. |
-| `urls` | Array | A list of Erome album URLs for bulk downloading. |
-| `username` | String | A specific Erome profile username to extract all posts/albums from. |
-| `query` | String | A search keyword to scrape Erome albums. |
-| `download_media` | Boolean | True to physically download all `mp4`/`jpg` files to storage, False to only export the metadata. Default: `false`. |
-| `proxyConfiguration` | Object | Proxy settings to prevent IP bans and secure the traffic flow. |
+- Input: Supported EroMe videos
+- Input: Supported EroMe images
+- Output: MP4 for videos, original format for images where available
 
-### Input Example
+Saved files are organized locally for easier browsing after download.
 
-```
-{
-  "url": "https://www.erome.com/a/U3CyGACn",
-  "download_media": true
-}
-```
+## Who It's For
 
-## Output Example
+- EroMe users who want offline copies of supported albums
+- Users saving both video and image content from the same page
+- People who want a browser-based workflow instead of manual saving
+- Anyone building a cleaner local archive from supported media pages
 
-Upon completion, you will find your structured data export containing all necessary metadata. If `download_media` was checked, the actual media files will be saved in structured storage.
+## Common Use Cases
 
-```
-{
-  "input": {
-    "url": "https://www.erome.com/a/U3CyGACn",
-    "download_media": true
-  },
-  "success": true,
-  "data": {
-    "type": "album",
-    "album_id": "U3CyGACn",
-    "title": "Asian wild babe sloppy blowjob",
-    "user": "PINKPARK",
-    "tags": ["amateur", "creampie", "asian"],
-    "count": 6,
-    "date": "2026-04-06T13:53:18.000Z",
-    "media": [
-      {
-        "num": 1,
-        "url": "https://s94.erome.com/.../file.jpg",
-        "filename": "nqKmbvAz",
-        "extension": "jpg"
-      },
-      {
-        "num": 2,
-        "url": "https://v94.erome.com/.../file.mp4",
-        "filename": "Z64ancVH_720p",
-        "extension": "mp4"
-      }
-    ],
-    "download_stats": {
-      "totalMedia": 6,
-      "downloadedMedia": 6
-    }
-  }
-}
-```
+- Save supported videos from an EroMe album
+- Download album images in a cleaner workflow
+- Keep video and image content together in an organized folder
+- Download the best quality exposed for a supported video
+- Avoid one-file-at-a-time manual saving
 
-## Usage Limits & Disclaimer
+## Troubleshooting
 
-Please respect Erome.com's Terms of Service and bandwidth capabilities. We strongly advise utilizing reliable residential proxies inside your configuration to decrease the likelihood of getting banned and to ensure a healthy and stable automated flow for all your web-scraping endeavors.
+**The extension is not detecting the album media**
+
+Refresh the page and wait for the album contents to load fully before trying again.
+
+**Some items are missing**
+
+Make sure the full album section is visible and loaded in the current browser session.
+
+**The video quality list is short**
+
+That usually means the page is exposing a limited set of playable variants.
+
+**The page requires access permissions**
+
+The extension only works on content you can already open in your active browser session.
+
+## Trial & Access
+
+- Includes **3 free downloads** so you can test the workflow first
+- Email sign-in uses secure one-time password verification
+- No credit card required for the trial
+- Unlimited downloads are available with a paid license
+
+Start here: [https://serp.ly/erome-downloader](https://serp.ly/erome-downloader)
+
+## Installation Instructions
+
+1. Open the latest release page:
+[https://github.com/serpxxx/erome-downloader/releases/latest](https://github.com/serpxxx/erome-downloader/releases/latest)
+2. Download the extension build for your browser.
+3. Install the extension.
+4. Open EroMe and navigate to a supported album or media page.
+5. Use the extension controls to detect and download the media.
+
+## FAQ
+
+**Can I download both videos and images from EroMe?**
+
+Yes. Supported album pages can expose both media types through the extension.
+
+**What file format do videos use?**
+
+Supported videos are exported as MP4 files.
+
+**Do images stay in their original format?**
+
+Where supported, images are saved in the original format exposed by the page.
+
+**Where are files saved?**
+
+They are saved to your default Downloads location, typically inside an EROME subfolder.
+
+**Do I need extra software?**
+
+No. Everything runs through the browser extension.
+
+## Notes
+
+- Only download content you own or have explicit permission to save
+- An internet connection is required while loading and downloading album media
+- Source quality and media availability depend on what the page exposes
+- The extension only works on content visible in your active browser session
+
+## License
+
+This repository includes an MIT license in [LICENSE.md](https://github.com/serpxxx/erome-downloader/blob/main/LICENSE.md).
+
+## About EroMe
+
+EroMe albums often mix multiple videos and images on the same page, which makes manual collection tedious and inconsistent. EroMe Downloader simplifies that workflow by detecting supported media, adding direct download controls, and organizing the saved output locally.
